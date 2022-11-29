@@ -101,7 +101,7 @@ public class CalculateService {
 	
 	public void squareRoot() {
 		try {
-			double first = (int)Double.parseDouble(this.calc.getFirstNumber());
+			double first = Double.parseDouble(this.calc.getFirstNumber());
 			if(first < 0) {
 				this.calc.setResult("Error");
 				return;
@@ -115,7 +115,7 @@ public class CalculateService {
 	
 	public void square() {
 		try {
-			double first = (int)Double.parseDouble(this.calc.getFirstNumber());
+			double first = Double.parseDouble(this.calc.getFirstNumber());
 			this.calc.setResult((Math.pow(first,2))+"");
 		}
 		catch(Exception e) {
@@ -125,7 +125,7 @@ public class CalculateService {
 	
 	public void reverse() {
 		try {
-			double first = (int)Double.parseDouble(this.calc.getFirstNumber());
+			double first = Double.parseDouble(this.calc.getFirstNumber());
 			if(Math.abs(first)<Math.pow(10, -18)) {
 				this.calc.setResult("Error");
 				return;
